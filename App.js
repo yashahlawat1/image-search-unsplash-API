@@ -34,7 +34,7 @@ function App() {
           return [...oldPhotos, ...data];
         }
       });
-      setLoading(false); // Don't forget to set loading to false after fetching
+      setLoading(false);
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -43,7 +43,7 @@ function App() {
 
   useEffect(() => {
     fetchImages();
-  }, [fetchImages]); // Include fetchImages as a dependency
+  }, [fetchImages]); 
 
   useEffect(() => {
     const handleScroll = () => {
